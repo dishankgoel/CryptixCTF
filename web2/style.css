@@ -1,0 +1,25 @@
+html, body{ margin: 0;  height: 100%; overflow: hidden}
+.bg{
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(44, 39, 37));
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logos{
+    padding-top: 2%;
+    padding-left: 4%;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+.aml_logo{
+    display: inline-block;
+}
+
+.cryptix_logo{
+    position: absolute;
+    padding-left: 30%;
+    padding-top: 3%;
+    display: inline-block;
+}

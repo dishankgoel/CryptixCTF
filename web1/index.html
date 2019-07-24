@@ -1,0 +1,82 @@
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <head>
+        <title>Greetings</title>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+    <link rel="stylesheet" href="style.css">
+    <body class="bg">
+        <div class="logos">
+            <div class="aml_logo">
+                <img src="images/aml_logo.png" height="25%" width="110%">
+            </div>
+            <div class="cryptix_logo">
+                <img src="images/CryptixDark.png" height="20%" width="80%" />
+            </div>
+        </div>
+        <h1 class="greet" id="greet"></h1>
+        <div class="message1">
+            <p id="message1"></p>
+        </div>
+        <div class="message2">
+            <p id="message2"></p>
+        </div>
+        <div class="links" id="links"></div>
+        <!-- Came for the flag? Bingo!
+              first part: flag{Pr3tty_ 
+        -->
+    
+    <script src="script.js"></script>
+    <script>
+        confetti.start(3000);
+        var i = 0;
+        var greet = 'Greetings, participant';
+        var speed = 50;
+
+        function typeWriter1() {
+            if (i < greet.length) {
+                document.getElementById("greet").innerHTML += greet.charAt(i);
+                i++;
+                setTimeout(typeWriter1, speed);
+            }
+            else{
+                i = 0;
+                speed = 30;
+            }
+        }
+        var message = "I take this opportunity to Thank you for participating in CryptixCTF.\n I hope this contest will teach you something New and Exciting!";
+        function typeWriter2() {
+            if (i < message.length) {
+                document.getElementById("message1").innerHTML += message.charAt(i);
+                i++;
+                setTimeout(typeWriter2, speed);
+            }
+            else{
+                i = 0;
+            }
+        }
+        var m2 = "Meanwhile, if you haven't checked out Amalthea, The Annual Technical Summit of IIT Gandhinagar, do have a look.";
+        function typeWriter3() {
+            if (i < m2.length) {
+                document.getElementById("message2").innerHTML += m2.charAt(i);
+                i++;
+                setTimeout(typeWriter3, speed);
+            }
+            else{
+                i = 0;
+            }
+        }
+        function add_icons(){
+            document.getElementById("links").innerHTML = '<a class="a1" href="https://www.facebook.com/amalthea.iitgn/" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a><a class="a2" href="https://www.instagram.com/amalthea_iitgn/" target="_blank"><i class="fa fa-instagram fa-3x"></i></a><a class="a3" href="http://amalthea.iitgn.ac.in/" target="_blank"><img src="images/aml_single.png" width="60px" height="60px"></a>';
+        }
+        myvar1 = setTimeout(typeWriter1, 3000);
+        myvar2 = setTimeout(typeWriter2, 5000);
+        myvar3 = setTimeout(typeWriter3, 10000);
+        myvar4 = setTimeout(add_icons, 14000);
+    </script>
+
+
+    </body>
+</html>
