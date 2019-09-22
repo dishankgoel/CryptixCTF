@@ -21,4 +21,6 @@ def encrpyt(random_str, message):
         encrpyted += (bin(k)[2:]).zfill(8)
     return encrpyted
 
+print(encrpyt(random_string(rand, message), message))
+
 
